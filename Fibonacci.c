@@ -1,11 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,6 +14,13 @@ int* FibonacciSeries(int n){
     
     return array;
 }
+int sumSeries(int *arr,int n){
+    int i,sum=0;
+    for(i=0;i<n;i++){
+        sum+=arr[i];
+    }
+    return sum-1;
+}
 
 int main()
 {
@@ -29,5 +28,6 @@ int main()
     scanf("%d", &n);
     int* array = FibonacciSeries(n);
     
-    for(int i=0; i<n; i++) printf("%d ", array[i]);
+    int sumOfFib= sumSeries(array,n);
+    printf("%d",sumOfFib);
 }
