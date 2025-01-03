@@ -19,7 +19,7 @@ int sumSeries(int *arr,int n){
     for(i=0;i<n;i++){
         sum+=arr[i];
     }
-    return sum-1;
+    return sum+1;
 }
 
 int main()
